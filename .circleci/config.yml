@@ -33,7 +33,6 @@ jobs:
 workflows:
   say-helloworld-workflow:
     jobs:
-      - say-helloworld-workflow/run
       - say-hello
       - say-world :
           requires :
