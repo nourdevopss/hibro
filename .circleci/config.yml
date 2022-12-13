@@ -41,12 +41,8 @@ jobs:
 workflows:
   say-helloworld-workflow:
     jobs:
+      - build
       - say-hello
       - say-world :
           requires :
             - say-hello
-workflows:
-  test-env-vars:
-    jobs:
-      - build
-      
