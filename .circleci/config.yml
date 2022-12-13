@@ -36,4 +36,4 @@ workflows:
       - say-hello
       - say-world :
           requires :
-            - print-hello
+            - say-hello
