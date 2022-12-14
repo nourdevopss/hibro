@@ -19,7 +19,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo "Hello world!" > ~/output.txt
-      - persist_to_workplace:
+      - persist_to_worksplace:
           root: ~/
           path:
             - output.txt
