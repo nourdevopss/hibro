@@ -4,15 +4,15 @@ version: 2.1
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
-jobs:
-  build:
-    docker:
-      - image: cimg/base:2020.01
-    steps:
-      - checkout
-      - run:
-          name: "Add a job to the project's pipeline that prints your name to the console using the environment variable"
-          command: echo $CIRCLE_PR_REPONAME
+#jobs:
+ # build:
+  #  docker:
+   #   - image: cimg/base:2020.01
+    #steps:
+     # - checkout
+      #- run:
+       #   name: "Add a job to the project's pipeline that prints your name to the console using the environment variable"
+        #  command: echo $CIRCLE_PR_REPONAME
  
   save_hello_world_output:
     docker:
@@ -47,7 +47,7 @@ jobs:
 workflows:
   say-helloworld-workflow:
     jobs:
-      - build
+#      - build
       - save_hello_world_output
       - print_output_file:
           requires :
