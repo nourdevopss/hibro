@@ -41,6 +41,12 @@ jobs:
           at: ~/
       - run: cat ~/output.txt
 
+  use_command_job:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - print_pipeline_id:
+          to: 
 #  say-world:
  #   docker:
   #    - image: cimg/base:stable
@@ -61,3 +67,4 @@ workflows:
       - print_output_file:
           requires :
             - save_hello_world_output
+      - use_command_job
