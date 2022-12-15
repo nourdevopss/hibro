@@ -67,4 +67,4 @@ workflows:
       - print_output_file:
           requires :
             - save_hello_world_output
-      - use_command_jobb
+      - use_command_job
